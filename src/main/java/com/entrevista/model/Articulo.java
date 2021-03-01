@@ -24,6 +24,9 @@ public class Articulo {
 	@Column(name = "valorUnitario", nullable = false, length = 10)
 	private Double valorUnitario;
 	
+	@Column(name = "stock", nullable = false, length= 10)
+	private Integer stock;
+	
 	public int getIdArticulo() {
 		return idArticulo;
 	}
@@ -54,6 +57,14 @@ public class Articulo {
 
 	public void setValorUnitario(Double valorUnitario) {
 		this.valorUnitario = valorUnitario;
+	}
+
+	public Integer getStock() {
+		return stock;
+	}
+
+	public void setStock(Integer stock) {
+		this.stock = stock;
 	}
 
 }

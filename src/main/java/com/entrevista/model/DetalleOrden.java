@@ -1,5 +1,6 @@
 package com.entrevista.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -26,6 +27,9 @@ public class DetalleOrden {
 	@ManyToOne
 	@JoinColumn(name = "id_articulo", nullable = false, foreignKey = @ForeignKey(name = "fk_detalle_orden_articulo"))
 	private Articulo articulo;
+	
+	@Column(name = "cantidad", length= 10)
+	private Integer cantidad;
 
 	public int getIdDetalle() {
 		return idDetalle;
@@ -49,6 +53,14 @@ public class DetalleOrden {
 
 	public void setArticulo(Articulo articulo) {
 		this.articulo = articulo;
+	}
+
+	public Integer getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
 	}
 	
 	
