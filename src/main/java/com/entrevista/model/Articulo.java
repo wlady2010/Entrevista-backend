@@ -24,7 +24,7 @@ public class Articulo {
 	@Column(name = "valorUnitario", nullable = false, length = 10)
 	private Double valorUnitario;
 	
-	@Column(name = "stock", nullable = false, length= 10)
+	@Column(name = "stock", length= 10)
 	private Integer stock;
 	
 	public int getIdArticulo() {
